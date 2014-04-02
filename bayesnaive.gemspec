@@ -6,12 +6,12 @@ require 'bayesnaive/version'
 Gem::Specification.new do |spec|
   spec.name          = "bayesnaive"
   spec.version       = Bayesnaive::VERSION
-  spec.authors       = ["Serginho"]
-  spec.email         = ["madridserginho@hotmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.authors       = ["Sergio Cancelo"]
+  spec.email         = ["yo@sergiocancelo.es"]
+  spec.description   = %q{Implementation of Bayes Naïve algorithm to classify documents that's written in spanish language.}
+  spec.summary       = %q{Implementation of Bayes Naïve algorithm to classify documents that's written in spanish language}
+  spec.homepage      = "http://www.sergiocancelo.es/"
+  spec.license       = "LGPL"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
