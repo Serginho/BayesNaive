@@ -22,8 +22,8 @@ Or install it yourself as:
 require 'bayesnaive'
 
 classifier = Classifier::Bayes.new 'Good', 'Bad'
-classifier.train "That's good"
-classifier.train "That's bad"
+classifier.train_good "That's good"
+classifier.train_bad "That's bad"
 category = classifier.classify 'something bad'
 
 puts category
