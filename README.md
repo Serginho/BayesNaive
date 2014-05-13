@@ -1,6 +1,6 @@
 # Bayesnaive
 
-TODO: Write a gem description
+An implementation of Bayes Naïve algorithm to classify documents that are written in spanish language.
 
 ## Installation
 
@@ -18,12 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'bayesnaive'
 
-## Contributing
+classifier = Classifier::Bayes.new 'Good', 'Bad'
+classifier.train 'That's good'
+classifier.train 'That's bad'
+category = classifier.classify 'something bad'
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+puts category
+```
