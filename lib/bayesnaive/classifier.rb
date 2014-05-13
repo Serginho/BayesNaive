@@ -64,17 +64,17 @@ module Classifier
     # The largest of these scores (the one closest to 0) is the one picked out by #classify
     def classifications(text)
       score = Hash.new #Genera el hash
-      training_count = @category_counts.values.inject { |x,y| x+y }.to_f              #Suma todos los documentos entrenados
-      @categories.each do |category, category_words|                                  #para cada categoria y su hash de words
-        score[category.to_s] = 0                                                      #inicializa score a 0 para esa categoria
-        total = category_words.values.inject(0) {|sum, element| sum+element}          #suma todas las palabras de la categoria
-        text.word_hash.each do |word, count|                                          #para cada palabra del nuevo documento
-          s = category_words.has_key?(word) ? category_words[word] : 0.1              #almacena en s el numero de palabras que hay, y si no hay 0.1
-          score[category.to_s] += Math.log(s/total.to_f)                              #el score = score + log(numero de palabras que hay / total palabras categoria)
+      training_count = @category_counts.values.inject { |x,y| x+y }.to_f
+      @categories.each do |category, category_words|
+        score[category.to_s] = 0
+        total = category_words.values.inject(0) {|sum, element| sum+element}
+        text.word_hash.each do |word, count|
+          s = category_words.has_key?(word) ? category_words[word] : 0.1
+          score[category.to_s] += Math.log(s/total.to_f)
         end
         # now add prior probability for the category
-        s = @category_counts.has_key?(category) ? @category_counts[category] : 0.1    #almacena en s el numero de documentos de la categoria
-        score[category.to_s] += Math.log(s / training_count)                          #score = score + log(numero de documentos categoria / total documentos)
+        s = @category_counts.has_key?(category) ? @category_counts[category] : 0.1
+        score[category.to_s] += Math.log(s / training_count)
       end
       return score
     end

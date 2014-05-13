@@ -1,6 +1,9 @@
 #!/bin/env ruby
 # encoding: utf-8
 
+# Author::    Lucas Carlson  (mailto:lucas@rufy.com)
+# Copyright:: Copyright (c) 2005 Lucas Carlson
+
 # Author::    Sergio Cancelo (mailto: yo@sergiocancelo.es)
 # Copyright:: Copyright (c) 2014 Sergio Cancelo
 

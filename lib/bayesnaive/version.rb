@@ -2,5 +2,5 @@
 # Copyright:: Copyright (c) 2014 Sergio Cancelo
 
 module Bayesnaive
-  VERSION = "1.0.1"
+  VERSION = "1.0.4"
 end

@@ -1,5 +1,5 @@
-# Author::    Sergio Cancelo (mailto: yo@sergiocancelo.es)
-# Copyright:: Copyright (c) 2014 Sergio Cancelo
+# Author::    Lucas Carlson  (mailto:lucas@rufy.com)
+# Copyright:: Copyright (c) 2005 Lucas Carlson
 
 require 'bayesnaive/extensions/word_hash'
 
